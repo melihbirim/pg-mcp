@@ -6,6 +6,9 @@ yarn-error.log*
 
 # Build output
 build/
+vscode-extension/out/
+vscode-extension/node_modules/
+*.vsix
 
 # Environment variables
 .env
