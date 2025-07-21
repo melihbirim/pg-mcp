@@ -93,14 +93,14 @@ class DatabaseItem extends vscode.TreeItem {
     public readonly description?: string
   ) {
     super(label, collapsibleState);
-    super.tooltip = `${this.label}-${this.description}`;
-    super.description = this.description;
+    this.tooltip = `${this.label}-${this.description}`;
+    this.description = description;
     
     // Set icons based on context
     if (contextValue === 'table') {
-      super.iconPath = new vscode.ThemeIcon('table');
+      this.iconPath = new vscode.ThemeIcon('table');
     } else if (contextValue === 'column') {
-      super.iconPath = new vscode.ThemeIcon('symbol-field');
+      this.iconPath = new vscode.ThemeIcon('symbol-field');
     }
   }
 }

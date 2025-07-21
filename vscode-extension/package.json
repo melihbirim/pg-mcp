@@ -4,6 +4,7 @@
   "description": "PostgreSQL Model Context Protocol extension for natural language database queries",
   "version": "1.0.0",
   "publisher": "melihbirim",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/melihbirim/pg-mcp"
@@ -30,6 +31,7 @@
     "onCommand:postgresql-mcp.showSchema"
   ],
   "main": "./out/extension.js",
+  "_icon": "resources/icon.png",
   "contributes": {
     "commands": [
       {

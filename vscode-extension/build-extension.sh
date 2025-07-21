@@ -14,6 +14,10 @@ fi
 echo "Compiling TypeScript..."
 npm run compile
 
+# Package the extension
+echo "Packaging the extension..."
+npm run package
+
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     echo "✅ Extension compiled successfully!"
