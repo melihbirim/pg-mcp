@@ -2,6 +2,13 @@
 
 A Model Context Protocol (MCP) server that enables AI assistants to interact with PostgreSQL databases using natural language queries. This server provides secure, read-only access to database schemas and allows for natural language to SQL translation.
 
+## 🎯 Available Implementations
+
+This project provides two ways to use PostgreSQL with MCP:
+
+1. **[Standalone MCP Server](#standalone-mcp-server)** - Use with Claude Desktop or other MCP clients
+2. **[VS Code Extension](#vs-code-extension)** - Integrated database explorer and query tool for VS Code
+
 ## Features
 
 - 🔒 **Secure**: Read-only operations only (SELECT, SHOW, DESCRIBE, EXPLAIN, WITH)
@@ -10,7 +17,39 @@ A Model Context Protocol (MCP) server that enables AI assistants to interact wit
 - 🌐 **Natural Language**: Enables AI assistants to convert natural language to SQL
 - ⚡ **Fast**: Built with TypeScript and the official MCP SDK
 
-## Available Tools
+## VS Code Extension
+
+### 🚀 Quick Start with VS Code Extension
+
+1. Navigate to the extension directory:
+   ```bash
+   cd vscode-extension
+   ```
+
+2. Install dependencies and compile:
+   ```bash
+   npm install
+   npm run compile
+   ```
+
+3. Open VS Code and press `F5` to launch Extension Development Host
+
+4. In the new window, use Command Palette (`Ctrl+Shift+P`) and run:
+   - "PostgreSQL MCP: Connect to PostgreSQL Database"
+
+### Extension Features
+
+- 🔌 **Easy Database Connection**: Connect with simple UI prompts
+- 🌳 **Database Explorer**: Tree view of tables and columns
+- 🗣️ **Natural Language Queries**: Basic natural language to SQL conversion
+- 📊 **Results Viewer**: Formatted query results in markdown
+- 🛡️ **Security**: Same read-only safety as the MCP server
+
+[📖 Full VS Code Extension Documentation](./vscode-extension/README.md)
+
+## Standalone MCP Server
+
+### Available Tools
 
 ### Database Connection
 - `connect_database` - Connect to a PostgreSQL database
@@ -24,24 +63,24 @@ A Model Context Protocol (MCP) server that enables AI assistants to interact wit
 ### Query Execution
 - `execute_query` - Execute read-only SQL queries with safety checks
 
-## Quick Test with Docker
+### Quick Test with Docker
 
-### 1. Start Test Database
+#### 1. Start Test Database
 ```bash
 npm run docker:up
 ```
 
-### 2. Run Tests
+#### 2. Run Tests
 ```bash
 npm run test
 ```
 
-### 3. Try Manual Testing
+#### 3. Try Manual Testing
 ```bash
 npm run test:manual
 ```
 
-### 4. Clean Up
+#### 4. Clean Up
 ```bash
 npm run docker:down
 ```
