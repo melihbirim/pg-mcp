@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "postgresql-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["/Users/melihbirim/code/pg-mcp/build/index.js"]
+    }
+  }
+}

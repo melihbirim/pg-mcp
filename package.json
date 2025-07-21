@@ -1,0 +1,33 @@
+{
+  "name": "pg-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for PostgreSQL that enables natural language database queries",
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "pg-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "start": "node build/index.js",
+    "dev": "npm run build && npm run start",
+    "test": "npm run build && node test-mcp.mjs",
+    "test:manual": "npm run build && node manual-test.mjs",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker logs pg-mcp-test"
+  },
+  "keywords": ["mcp", "postgresql", "database", "natural-language", "sql"],
+  "author": "",
+  "license": "ISC",
+  "files": ["build"],
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "@types/pg": "^8.15.4",
+    "pg": "^8.16.3",
+    "zod": "^3.25.76"
+  }
+}
