@@ -2,6 +2,10 @@
 
 A Model Context Protocol (MCP) server that enables AI assistants to interact with PostgreSQL databases using natural language queries. This server provides secure, read-only access to database schemas and allows for natural language to SQL translation.
 
+<a href="https://glama.ai/mcp/servers/@melihbirim/pg-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@melihbirim/pg-mcp/badge" alt="PostgreSQL Server MCP server" />
+</a>
+
 ## Features
 
 - 🔒 **Secure**: Read-only operations only (SELECT, SHOW, DESCRIBE, EXPLAIN, WITH)
